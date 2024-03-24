@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+  <title>Map with Driving Route from A to B</title>
+  <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
+  <link rel="stylesheet" type="text/css" href="demo.css" />
+  <link rel="stylesheet" type="text/css" href="/mapinfo/styles.css" />
+  <link rel="stylesheet" type="text/css" href="../template.css" />
+  <script type="text/javascript" src='../test-credentials.js'></script>
+  <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
+  <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
+  <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
+  <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
+  
+</head>
+<body id="markers-on-the-map">
+<header class="container py-3">
+    <button onclick="goBack()" class="back-button">
+        <a href="/index.html" class="back-button"></a>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-bar-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M12.5 15a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5M10 8a.5.5 0 0 1-.5.5H3.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L3.707 7.5H9.5a.5.5 0 0 1 .5.5"/>
+          </svg>
+        Back
+    </button>
+  <h1>Welcome to Tourify</h1>
+  <h2>Your Ultimate Tourist Destination Finder</h2>
+</header>
+<div class="page-header">
+  <h1>Map with Driving Route from Vitoria Memorial to Howrah</h1>
+</div>
+<div id="map"></div>
+<div id="historical-info">
+  <div>
+    <h3>Historical Information about the Place</h3>
+    <p>The Howrah Bridge is a balanced steel bridge over the Hooghly River in West Bengal, India. Commissioned in 1943, the bridge was originally named the New Howrah Bridge, because it replaced a pontoon bridge at the same location linking the cities of Howrah and Kolkata, which are located at the opposite banks of each other. On 14 June 1965, it was renamed Rabindra Setu after the Bengali poet Rabindranath Tagore, who was the first Indian and Asian Nobel laureate.[11] It is still popularly known as the Howrah Bridge.
+
+      The bridge is one of four on the Hooghly River and is a famous symbol of Kolkata and West Bengal. The other bridges are the Vidyasagar Setu (popularly called the Second Hooghly Bridge), the Vivekananda Setu and the relatively new Nivedita Setu. It carries a daily traffic of approximately 100,000 vehicles and possibly more than 150,000 pedestrians, easily making it the busiest cantilever bridge in the world. The third-longest cantilever bridge at the time of its construction, the Howrah Bridge is currently the sixth-longest bridge of its type in the world.
+      
+      
+      View of a Ferry with Rabindra Setu
+      History
+      1862 proposal by Turnbull
+      In 1862, the Government of Bengal asked George Turnbull, chief engineer of the East Indian Railway Company to study the feasibility of bridging the Hooghly River. He had recently established the company's rail terminus in Howrah. He reported on 19 March, with large-scale drawings and estimates, that:
+      
+      The foundations for a bridge at Calcutta would be at a considerable depth and cost because of the depth of the mud there.
+      The impediment to shipping would be considerable.
+      A good place for the bridge was at Pulta Ghat "about a dozen miles north of Calcutta" where a "bed of stiff clay existed at no great depth under the river bed".
+      A suspended-girder bridge of five spans of 401 feet (122 m) and two spans 200 feet (61 m) would be ideal.</p>
+  </div>
+  <div class="images-container">
+    <img src="/Images/howrah_bridge_1-sixteen_nine.avif" alt="Photo 1" width="500">
+    <img src="/Images/howrah2.jpeg" alt="Photo 2" width="500">
+    
+  </div>
+</div>
+<script type="text/javascript" src='/mapinfo/kolkata/howrah/script.js'></script>
+</body>
+</html>

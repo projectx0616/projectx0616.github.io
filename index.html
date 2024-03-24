@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Far and Away - Find Tourist Locations</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-XXX" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+        .full-height {
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 100%;
+        }
+        .scrollable {
+            overflow-y: auto;
+        }
+        .search-section {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .results-section {
+            height: 100%;
+            overflow-y: auto;
+        }
+        .location-item {
+            margin-bottom: 20px;
+        }
+        .location-item img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Styles for the services section */
+        .services-section {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            margin-bottom :20px;
+        }
+
+        .service {
+            flex: 0 1 30%; /* Adjust the width as needed */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .service h2 {
+            margin-bottom: 10px;
+        }
+
+        .service p {
+            font-size: 14px;
+        }
+
+        .service svg {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body class="d-flex flex-column full-height">
+    <header class="container py-3">
+        <h1>Welcome to Far And Away</h1>
+        <h2>Your Ultimate Tourist Destination Finder</h2>
+    </header>
+    <nav>
+        
+        <ul class="nav-links">
+            <li><a href="/index.html">
+            Home</a>
+            </li>
+            <li><a href="/guide/guide.html">
+                Guided Tour</a>
+                </li>
+            <li><a href="/about/about.html">
+            About</a>
+            </li>
+            <li><a href="/services/services.html">
+            Services</a>
+            </li>
+            <li><a href="/contactus/contactus.html">
+            Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <main class="flex-grow-1">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="search-section">
+                        <section>
+                            <h3>Search for Your Next Adventure</h3>
+                            <div class="mb-3">
+                                <style>
+                                    .custom-select-wrapper {
+                                        position: relative;
+                                        display: inline-block;
+                                        width: 100%;
+                                    }
+                                
+                                    .custom-select {
+                                        display: block;
+                                        width: 100%;
+                                        padding: 0.375rem 1.75rem 0.375rem 0.75rem;
+                                        line-height: 1.5;
+                                        color: #495057;
+                                        background-color: #fff;
+                                        background-clip: padding-box;
+                                        border: 1px solid #ced4da;
+                                        border-radius: 0.25rem;
+                                        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+                                        appearance: none;
+                                    }
+                                
+                                    .custom-select:focus {
+                                        border-color: #80bdff;
+                                        outline: 0;
+                                        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+                                    }
+                                
+                                    .custom-select-arrow {
+                                        position: absolute;
+                                        right: 0.75rem;
+                                        top: 50%;
+                                        transform: translateY(-50%);
+                                        pointer-events: none;
+                                    }
+                                </style>
+                                
+                                <div class="custom-select-wrapper">
+                                    <select id="cityInput" class="form-select custom-select">
+                                        <option value="" selected disabled>Select a city...</option>
+                                        <option value="Kolkata">Kolkata</option>
+                                        <option value="Mumbai">Mumbai</option>
+                                        <option value="Mathura">Mathura</option>
+                                        <option value="Delhi">Delhi</option>
+                                        <option value="Jaipur">Jaipur</option>
+                                        <!-- Add more options as needed -->
+                                    </select>
+                                    <div class="custom-select-arrow">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                            <path d="M1.646 5.646a.5.5 0 0 1 .708 0L8 11.293l5.646-5.647a.5.5 0 1 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <button onclick="searchLocations()" class="btn btn-primary">Search</button>
+                        </section>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="results-section">
+                        <section id="touristLocations">
+                            <!-- Tourist locations will be displayed here -->
+                        </section>
+                    </div>
+                  <header>
+        <h1>Our Services</h1>
+    </header>
+                    <div class="services-section">
+                        <div class="service">
+                            <img src="/Images/mapint.png" width="200"height="230">
+                            <h2>Intractive Maps</h2>
+                            <h4> In interactive mapping, the map becomes interactive, allowing users to manipulate it.</p>
+                        </div>
+                        <div class="service">
+                            <img src="https://th.bing.com/th/id/OIP.PhJZ3bG_3gRcvHqDcmtNlgHaFY?rs=1&pid=ImgDetMain"width="200"height="230">
+                            <h2>Guided Tours</h2>
+                            <h4>A guided tour is an experience where a knowledgeable tour guide accompanies visitors to various places of interest.</p>
+                        </div>
+                        <div class="service">
+                            <img src="https://th.bing.com/th/id/OIP.myoCd4CG204UAwKBBRz0SgHaEa?rs=1&pid=ImgDetMain" width="200"height="230">
+                            <h2>Historical Info</h2>
+                            <h4>  Collected about past events and circumstances pertaining to a particular subject. By definition, historical data includes most data generated either manually or automatically within an enterprise.</p>
+                        </div>
+                    </div>
+                </div>
+                <section class="about">
+		<h1>About Us</h1>
+		<p style="font-weight: bold">
+		Your journey, our heartfelt wishes
+		</p>
+		<div class="about-info">
+			<div class="about-img">
+				<img src=
+"/Images/logo.jpg" alt="FAR AND AWAY">
+			</div>
+			<div>
+			<p> 
+Our website or mobile app aims to revolutionize the way tourists explore cities by integrating HERE Location Services and Mobile SDKs. Offering an immersive experience, we provide guided tours, comprehensive historical information, and interactive maps tailored to enhance every traveler's exploration journey. With seamless navigation and rich content, we strive to make city exploration more engaging, informative, and memorable for all visitors.
+
+
+
+
+
+
+			</p>
+				<button>Read More...</button>
+			</div>
+		</div>
+	</section>
+
+	<section class="team">
+		<h1>Meet Our Team</h1>
+		<div class="team-cards">
+		
+			<!-- Cards here -->
+			<!-- Card 1 -->
+		
+			<div class="card">
+				<div class="card-img">
+					<img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20230822183347/
+man-portrait-businessman-male.jpg" alt="User 1">
+				</div>
+				<div class="card-info">
+					<h2 class="card-name">NITYANSHU</h2>
+					<p class="card-role">CEO and Founder</p>
+					<p class="card-email">nityanshu3124@gmail.com</p>
+					<p><button class="button">Contact</button></p>
+				</div>
+			</div>
+
+			<!-- Card 2 -->
+		
+			<div class="card">
+				<div class="card-img">
+					<img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20230822183347/
+man-portrait-businessman-male.jpg" alt="User 2">
+				</div>
+				<div class="card-info">
+					<h2 class="card-name">SAURABH</h2>
+					<p class="card-role">Co-Founder</p>
+					<p class="card-email">saurabhwake80@gmail.com</p>
+					<p><button class="button">Contact</button></p>
+				</div>
+			</div>
+
+            <div class="card">
+				<div class="card-img">
+					<img src=
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuZHeav_pisAVYhZICGt3nlsSY8D8KqWmCjQ&usqp=CAU" alt="User 2">
+				</div>
+				<div class="card-info">
+					<h2 class="card-name">PRERNA</h2>
+					<p class="card-role">Co-Founder</p>
+					<p class="card-email">prernasharma@gmail.com</p>
+					<p><button class="button">Contact</button></p>
+				</div>
+			</div>
+		
+			<!-- Card 3 -->
+		
+			<div class="card">
+				<div class="card-img">
+					<img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20230822183347/
+man-portrait-businessman-male.jpg" alt="User 3">
+				</div>
+				<div class="card-info">
+					<h2 class="card-name">RICK</h2>
+					<p class="card-role">Co-Founder</p>
+					<p class="card-email">rickmistri@gmail.com</p>
+					<p><button class="button">Contact</button></p>
+				</div>
+			</div>
+            
+		</div>
+	</section>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Bootstrap JavaScript (optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-XXX" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+  }
+  header {
+    background-color: #c5d0d8;
+    color: #1186c9;
+    padding: 20px 0;
+    text-align: center;
+  }
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .nav-links li {
+    display: inline;
+    margin-right: 20px;
+  }
+  .nav-links a {
+    color: #20b4e2;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.3s ease;
+  }
+  .nav-links a:hover {
+    color: #ffd700;
+  }
+  h1, h2 {
+    text-align: center;
+    margin-top: 30px;
+    color: #333;
+  }
+  h2 {
+    font-size: 28px;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  li {
+    margin-bottom: 20px;
+  }
+  strong {
+    font-weight: bold;
+  }
+  p {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 18px;
+  }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .tour-section {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .tour-section:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+  .tour-section h2 {
+    color: #333;
+  }
+  .tour-section ul {
+    padding-left: 20px;
+  }
+  .tour-section strong {
+    color: #007bff;
+  }

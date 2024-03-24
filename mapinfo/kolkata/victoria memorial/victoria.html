@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+  <title>Map with Driving Route from A to B</title>
+  <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
+  <link rel="stylesheet" type="text/css" href="demo.css" />
+  <link rel="stylesheet" type="text/css" href="/mapinfo/styles.css" />
+  <link rel="stylesheet" type="text/css" href="../template.css" />
+  <script type="text/javascript" src='../test-credentials.js'></script>
+  <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
+  <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
+  <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
+  <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
+  
+</head>
+<body id="markers-on-the-map">
+<header class="container py-3">
+    <button onclick="goBack()" class="back-button">
+        <a href="/index.html" class="back-button"></a>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-bar-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M12.5 15a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5M10 8a.5.5 0 0 1-.5.5H3.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L3.707 7.5H9.5a.5.5 0 0 1 .5.5"/>
+          </svg>
+        Back
+    </button>
+  <h1>Welcome to Tourify</h1>
+  <h2>Your Ultimate Tourist Destination Finder</h2>
+</header>
+<div class="page-header">
+  <h1>Map with Driving Route from South Dum Dum to Vitoria Memorial</h1>
+</div>
+<div id="map"></div>
+<div id="historical-info">
+  <div>
+    <h3>Historical Information about the Place</h3>
+    <p>The Victoria Memorial is a large marble monument dedicated to Queen Victoria, the Empress of India (1876-1901) facing the Queens Way on the Maidan in Central Kolkata. It was built between 1906 and 1921 by the British Raj.
+
+        It is the largest monument to a monarch anywhere in the world. It stands at 64 acres of gardens and is now a museum under the control of the Ministry of Culture, Government of India.[1] Possessing prominent features of the Indo-Saracenic architecture, it has evolved into one of the most popular attractions in the city.
+        
+        History
+        
+        Empress Victoria
+        According to historian Durba Ghosh, Viceroy of India Lord Curzon's "plans for the history museum that became the Victoria Memorial Hall predated Victoria's death in 1901. When he addressed a group at the Asiatic Society, he admitted that he had always planned to build such a historical museum. The queen's death had provided an appropriate occasion to monumentalize the empire."[2]
+        
+        After Victoria's death on 22 January 1901, Curzon wrote to Lord George Hamilton, the Secretary of State for India on 24 January, noting the "importance of Victoria's matriarchy to promoting loyalist feeling."[3] He proposed the construction of a grand building with a museum and gardens.[4] Curzon said on 26 February 1901 in his address to the Asiatic Society,
+        
+        "Let us, therefore, have a building, stately, spacious, monumental and grand, to which every newcomer in Calcutta will turn, to which all the resident population, European and Native, will flock, where all classes will learn the lessons of history and see revived before their eyes the marvels of the past; and where father shall say to son and mother and daughter — ‘This Statue and this great Hall were erected in memory of the greatest and best Sovereign whom India has ever known. She lived far away over the seas, but her heart was with her subjects in India, both of her own race, and of all others. She loved them both the same. In her time, and before it, great men lived, and great deeds were done. Here are their memorials. This is her monument.’[5]
+        
+        The government officials, princes, politicians, and people of India responded generously to Lord Curzon's appeal for funds, and the total cost of construction of the monument, amounting to one crore, five lakhs of Rupees, was entirely derived from their voluntary subscriptions.[6][5]
+        
+        The site chosen was near the present-day Raj Bhavan, known at the time as Government House. The construction of the Victoria Memorial was delayed by Curzon's departure from India in 1905, with a subsequent loss of local enthusiasm for the project. There was also some uncertainty about the strength of the foundations, and tests on them were carried out.[7] On 4 January 1906, George, the Prince of Wales laid the foundation stone.[8]
+        
+        The work of construction was entrusted to Messrs. Martin & Co. of Calcutta, and work on the superstructure began in 1910.[8] In 1911, before construction was finished, George V, the Emperor of India, announced the transfer of the capital of India from Calcutta to New Delhi.[9] Thus, the Victoria Memorial would come to stand in what would be a major provincial capital, rather than the national capital. The Victoria Memorial was completed and formally opened to the public in December 1921 by the Prince of Wales, the future Edward VIII.[7][8][10]
+        
+        After 1947, some additions were made to the Memorial.
+        
+        A smaller Victoria memorial was also constructed in the Hardoi district in North-Western Provinces (in modern Uttar Pradesh), which has since been converted into a city club for recreation. Mahatma Gandhi addressed meetings in Hardoi in the 1930s.</p>
+  </div>
+  <div class="images-container">
+    <img src="/Images/victoria1.jpeg" alt="Photo 1" width="500">
+    <img src="/Images/victoria2.jpeg" alt="Photo 2" width="500">
+    
+  </div>
+</div>
+<script type="text/javascript" src='/mapinfo/kolkata/victoria memorial/script.js'></script>
+</body>
+</html>
